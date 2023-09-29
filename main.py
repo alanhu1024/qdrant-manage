@@ -6,7 +6,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 import os
 
 pdf_path = "/Users/alanhu/Library/CloudStorage/OneDrive-个人/创业/01 企业客户/新能源/阳光电源/数据/sungrowpower_data/2022年报.pdf"
-loader = DirectoryLoader(dir, glob="*.pdf", loader_cls=PyPDFLoader)
+loader = DirectoryLoader(pdf_path, glob="*.pdf", loader_cls=PyPDFLoader)
 # loader = PyPDFLoader(pdf_path)
 docs = loader.load()
 print(f"Loaded {len(docs)} documents.")
